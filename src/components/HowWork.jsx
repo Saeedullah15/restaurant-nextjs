@@ -1,3 +1,5 @@
+"use client"
+import { JackInTheBox } from "react-awesome-reveal";
 
 const HowWork = () => {
     const worksData = [
@@ -35,12 +37,14 @@ const HowWork = () => {
             <div className="grid grid-cols-4 gap-5">
                 {
                     worksData.map(each =>
-                        <div key={each.id} className="flex flex-col justify-center items-center text-center border rounded-lg shadow p-4">
-                            <img className="w-16 h-16" src={each.image} alt="" />
-                            <h5 className="text-xl font-semibold mt-3">{each.title}</h5>
-                            <p className="text-[#666666] my-2 text-xs font-semibold">{each.subTitle}</p>
-                            <a href="" className="font-semibold hover:text-[#F03328]">Learn More</a>
-                        </div>
+                        <JackInTheBox>
+                            <div key={each.id} className="flex flex-col justify-center items-center text-center border rounded-lg shadow p-4">
+                                <img className="w-16 h-16" src={each.image} alt="" />
+                                <h5 className="text-xl font-semibold mt-3">{each.title}</h5>
+                                <p className="text-[#666666] my-2 text-xs font-semibold">{each.subTitle}</p>
+                                <a href="" className="font-semibold hover:text-[#F03328]">Learn More</a>
+                            </div>
+                        </JackInTheBox>
                     )
                 }
             </div>

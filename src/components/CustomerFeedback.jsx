@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import required modules
+import { Zoom } from 'react-awesome-reveal';
 import { Pagination } from 'swiper/modules';
 
 const feedbacks = [
@@ -70,7 +71,9 @@ const CustomerFeedback = () => {
             </div>
 
             <div className="w-1/2 bg-[url('/images/chefBG.png')]">
-                <img src="/images/chef.png" alt="" />
+                <Zoom>
+                    <img src="/images/chef.png" alt="" />
+                </Zoom>
             </div>
         </div>
     );

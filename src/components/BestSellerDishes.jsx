@@ -1,3 +1,6 @@
+"use client"
+
+import { Bounce } from "react-awesome-reveal";
 import { FaStar } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa6";
 
@@ -50,30 +53,34 @@ const BestSellerDishes = () => {
 
             <div className="grid grid-cols-3 gap-5 mt-10">
                 {
-                    dishArr.map(each => <div
-                        key={each.id}
-                        className="shadow rounded-lg"
-                    >
-                        <img src={each.image} alt="" />
-                        <div className="flex justify-between p-4">
-                            <div className="space-y-6">
-                                <h4 className="text-[#000000] font-semibold text-xl">{each.name}</h4>
-                                <div className="flex gap-1">
-                                    <FaStar className="text-[#FF9E0C]" />
-                                    <FaStar className="text-[#FF9E0C]" />
-                                    <FaStar className="text-[#FF9E0C]" />
-                                    <FaStar className="text-[#FF9E0C]" />
-                                    <FaStar className="text-[#FF9E0C]" />
+                    dishArr.map(each =>
+
+                        <div key={each.id} className="shadow rounded-lg">
+                            <Bounce>
+                                <img src={each.image} alt="" />
+                                <div className="flex justify-between p-4">
+                                    <div className="space-y-6">
+                                        <h4 className="text-[#000000] font-semibold text-xl">{each.name}</h4>
+                                        <div className="flex gap-1">
+                                            <FaStar className="text-[#FF9E0C]" />
+                                            <FaStar className="text-[#FF9E0C]" />
+                                            <FaStar className="text-[#FF9E0C]" />
+                                            <FaStar className="text-[#FF9E0C]" />
+                                            <FaStar className="text-[#FF9E0C]" />
+                                        </div>
+                                    </div>
+                                    <div className="space-y-4">
+                                        <button className="bg-redHighlighter3 text-white rounded-full text-sm px-3 py-1">Buy Now</button>
+                                        <h3 className="text-black font-bold text-2xl ml-5 flex items-center"><FaDollarSign />{each.price}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="space-y-4">
-                                <button className="bg-redHighlighter3 text-white rounded-full text-sm px-3 py-1">Buy Now</button>
-                                <h3 className="text-black font-bold text-2xl ml-5 flex items-center"><FaDollarSign />{each.price}</h3>
-                            </div>
+                            </Bounce>
                         </div>
-                    </div>)
+
+                    )
                 }
             </div>
+
         </div>
     );
 };
