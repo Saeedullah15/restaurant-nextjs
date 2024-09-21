@@ -31,19 +31,19 @@ const TeamMember = () => {
         <div className="relative">
             <div className="h-72 bg-[url('/images/teambg.png')] flex justify-center">
                 <div className="text-white w-1/3 text-center mt-16">
-                    <h2 className="text-2xl font-bold">Team Member</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas eveniet deleniti corporis veniam velit vitae dolorem?</p>
+                    <h2 className="text-3xl mb-2 font-bold">Team Member</h2>
+                    <p className="text-sm mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas eveniet deleniti corporis veniam velit vitae dolorem?</p>
                 </div>
             </div>
 
             <div className="absolute left-80 -bottom-36 max-w-5xl mx-auto grid grid-cols-4 gap-5">
                 {
                     members.map(each =>
-                        <div key={each.id} className="shadow-md">
-                            <img src={each.image} className=" w-52 h-52" alt="" />
-                            <div className="text-center">
-                                <h5>{each.name}</h5>
-                                <p>{each.role}</p>
+                        <div key={each.id} className="shadow">
+                            <img src={each.image} className=" w-52 h-44" alt="" />
+                            <div className="text-center py-4">
+                                <h5 className="text-[#4F4F4F] font-bold">{each.name}</h5>
+                                <p className="text-[#828282] text-sm font-semibold">{each.role}</p>
                             </div>
                         </div>
                     )

@@ -15,6 +15,10 @@ module.exports = {
                 redHighlighter3: "#F03328",
                 redHighlighter4: "#AD1519",
             },
+            fontFamily: {
+                sanchez: ["Sanchez"],
+                miniver: ["Miniver"],
+            },
         },
     },
     plugins: [

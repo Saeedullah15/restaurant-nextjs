@@ -4,8 +4,8 @@ const Partners = () => {
     return (
         <div className="mt-20">
             <div className="text-center mb-8">
-                <h4>Partners & Clients</h4>
-                <h2>We work with the best pepole</h2>
+                <h4 className="text-redHighlighter1 font-miniver text-sm font-bold italic">Partners & Clients</h4>
+                <h2 className="text-center text-[#2D2D2D] font-bold text-3xl mb-10">We work with the best pepole</h2>
             </div>
 
             <div>

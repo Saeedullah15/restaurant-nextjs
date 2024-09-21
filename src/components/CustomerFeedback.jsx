@@ -20,14 +20,14 @@ const feedbacks = [
     },
     {
         id: 2,
-        image: "/images/feedback1.png",
+        image: "/images/feedback2.png",
         feedback: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero cum repellendus recusandae quidem eligendi, voluptas, laboriosam commodi, inventore explicabo delectus nulla placeat amet eos nobis maiores facilis vel modi aliquam enim est praesentium iure? Consectetur asperiores pariatur nesciunt excepturi. Illum?",
         name: "Abraham Jordan",
         designation: "Frontend Developer"
     },
     {
         id: 3,
-        image: "/images/feedback1.png",
+        image: "/images/feedback3.webp",
         feedback: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam repudiandae maxime facere vitae quo, sit enim animi aliquam beatae explicabo quisquam asperiores labore eius similique magni possimus suscipit! Maiores dolore minima saepe repellat ea iusto ab excepturi eaque suscipit quam.",
         name: "Rewis Lohan",
         designation: "Backend Developer"
@@ -37,8 +37,8 @@ const feedbacks = [
 const CustomerFeedback = () => {
     return (
         <div className="mt-32 flex items-center gap-20">
-            <div className="w-2/3">
-                <h3>Customer <span className='text-redHighlighter4'>Feedback</span></h3>
+            <div className="w-1/2">
+                <h3 className='text-3xl font-semibold'>Customer <span className='text-redHighlighter4'>Feedback</span></h3>
 
                 <div>
                     <Swiper
@@ -54,12 +54,12 @@ const CustomerFeedback = () => {
                                 key={each.id}
                             >
                                 <div>
-                                    <p className='my-6'>{each.feedback}</p>
+                                    <p className='my-6 text-[#3D3D3D]'>{each.feedback}</p>
                                     <div className='flex items-center gap-4'>
-                                        <img src={each.image} alt="" />
+                                        <img src={each.image} className='w-14 h-14 border-2 border-black rounded-full' alt="" />
                                         <div>
-                                            <h6 className='text-redHighlighter1'>{each.name}</h6>
-                                            <p>{each.designation}</p>
+                                            <h6 className='text-redHighlighter1 font-bold'>{each.name}</h6>
+                                            <p className='text-xs font-semibold'>{each.designation}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ const CustomerFeedback = () => {
                 </div>
             </div>
 
-            <div className="w-1/3 bg-[url('/images/chefBG.png')]">
+            <div className="w-1/2 bg-[url('/images/chefBG.png')]">
                 <img src="/images/chef.png" alt="" />
             </div>
         </div>

@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Sanchez";
+    src: url('/src/app/fonts/Sanchez-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Miniver";
+    src: url('/src/app/fonts/Miniver-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .banner-container {
     /* position: relative; */
     /* width: 100%; */

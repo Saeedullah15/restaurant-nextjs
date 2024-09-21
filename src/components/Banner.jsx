@@ -25,14 +25,15 @@ const Banner = () => {
 
     return (
         <motion.div animate={{ backgroundColor: bgColor }} className="banner-container p-5 rounded-b-xl">
-            <h2 className="uppercase text-2xl text-white font-bold mb-20">Restaurant</h2>
+            <h2 className="uppercase text-2xl text-white font-semibold mb-20">Restaurant</h2>
             <div className="flex justify-between items-center">
                 <div className="w-1/2 pl-4">
-                    <div className="text-white font-semibold">
-                        <h1 className="text-5xl uppercase">Breakfast</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, quibusdam! Neque repellat nisi in reiciendis aliquid iusto ut nesciunt adipisci accusamus, illo accusantium fuga tenetur, culpa, magnam doloremque ullam molestiae eos veritatis enim? Dolore vitae harum cum repellat? Quisquam architecto dolore dolorem autem quis at, dolores voluptas debitis vel neque?</p>
+                    <div className="text-white">
+                        <h1 className="text-6xl uppercase font-sanchez">Breakfast</h1>
+                        <p>Breakfast, often referred to as the ‘most important meal of the day’, provides essential nutrients to kick start our day. It includes a variety of foods, like fruits, cereals, dairy products, and proteins, that contribute to a balanced diet. Eating a healthy breakfast can improve concentration and performance, boost physical endurance, and lower cholesterol levels.</p>
                     </div>
-                    <div className="thumbnails flex gap-4 mt-3">
+
+                    <div className="thumbnails flex gap-4 mt-5">
                         {images.map((image, index) => (
                             <img
                                 key={index}
@@ -42,6 +43,7 @@ const Banner = () => {
                             />
                         ))}
                     </div>
+
                     <div className="">
                         <label className="input input-bordered rounded-full flex items-center gap-2 my-16">
                             <svg

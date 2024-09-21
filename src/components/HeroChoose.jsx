@@ -27,17 +27,17 @@ const HeroChoose = () => {
             </div>
 
             <div className="w-1/2">
-                <h3 className="text-black font-semibold text-3xl mb-14">Why People Choose us?</h3>
-                <div className="space-y-14">
+                <h3 className="text-[#2D2D2D] font-semibold text-3xl mb-10">Why People Choose us?</h3>
+                <div className="space-y-10">
                     {
                         cardArr.map(each => <div
                             key={each.id}
-                            className="flex gap-4 shadow-md rounded-lg"
+                            className="flex gap-4 shadow-md rounded-lg p-4"
                         >
-                            <img className="w-20 h-20" src={each.image} alt="" />
+                            <img className="w-14 h-14" src={each.image} alt="" />
                             <div>
-                                <h4>{each.name}</h4>
-                                <p>{each.details}</p>
+                                <h4 className="text-[#000000] font-semibold mb-2 text-xl">{each.name}</h4>
+                                <p className="text-xs text-[#404040] font-semibold">{each.details}</p>
                             </div>
                         </div>)
                     }
