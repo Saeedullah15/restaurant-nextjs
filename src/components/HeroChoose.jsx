@@ -24,12 +24,12 @@ const HeroChoose = () => {
     ]
 
     return (
-        <div className="mb-20 flex items-center gap-20">
-            <div className="w-1/2">
+        <div className="mb-20 flex md:flex-row flex-col items-center gap-20">
+            <div className="md:w-1/2">
                 <img src="/images/choose.png" alt="" />
             </div>
 
-            <div className="w-1/2">
+            <div className="md:w-1/2">
                 <Slide>
                     <h3 className="text-[#2D2D2D] font-semibold text-3xl mb-10">Why People Choose us?</h3>
                     <div className="space-y-10">

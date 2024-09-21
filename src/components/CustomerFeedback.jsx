@@ -37,8 +37,8 @@ const feedbacks = [
 
 const CustomerFeedback = () => {
     return (
-        <div className="mt-32 flex items-center gap-20">
-            <div className="w-1/2">
+        <div className="mt-32 flex md:flex-row flex-col-reverse items-center gap-20">
+            <div className="md:w-1/2">
                 <h3 className='text-3xl font-semibold'>Customer <span className='text-redHighlighter4'>Feedback</span></h3>
 
                 <div>
@@ -48,7 +48,7 @@ const CustomerFeedback = () => {
                             clickable: true,
                         }}
                         modules={[Pagination]}
-                        className="mySwiper"
+                        className=""
                     >
                         {
                             feedbacks.map(each => <SwiperSlide
@@ -70,7 +70,7 @@ const CustomerFeedback = () => {
                 </div>
             </div>
 
-            <div className="w-1/2 bg-[url('/images/chefBG.png')]">
+            <div className="md:w-1/2 bg-[url('/images/chefBG.png')]">
                 <Zoom>
                     <img src="/images/chef.png" alt="" />
                 </Zoom>

@@ -15,12 +15,12 @@ export default function Home() {
         <>
             <Banner></Banner>
 
-            <section className="flex gap-20 justify-between mt-20 max-w-4xl mx-auto">
+            <section className="flex md:flex-row flex-col-reverse gap-20 justify-between p-2 md:p-0 mt-20 md:max-w-4xl mx-auto">
                 <PizzaDelivery></PizzaDelivery>
                 <AboutUs></AboutUs>
             </section>
 
-            <div className="max-w-5xl mx-auto p-7 my-10">
+            <div className="md:max-w-5xl mx-auto p-2 md:p-7 my-10">
                 <section>
                     <HeroChoose></HeroChoose>
                 </section>
@@ -30,13 +30,13 @@ export default function Home() {
                 </section>
             </div>
 
-            <section className="max-w-5xl mx-auto">
+            <section className="md:max-w-5xl mx-auto">
                 <CustomerFeedback></CustomerFeedback>
             </section>
 
             <TeamMember></TeamMember>
 
-            <div className="max-w-5xl mx-auto p-7 mt-52">
+            <div className="md:max-w-5xl mx-auto p-2 md:p-7 mt-20 md:mt-52">
                 <section>
                     <HowWork></HowWork>
                 </section>

@@ -26,22 +26,24 @@ const Banner = () => {
     return (
         <motion.div animate={{ backgroundColor: bgColor }} className="banner-container p-5 rounded-b-xl">
             <h2 className="uppercase text-2xl text-white font-semibold mb-20">Restaurant</h2>
-            <div className="flex justify-between items-center">
-                <div className="w-1/2 pl-4">
+            <div className="flex md:flex-row flex-col justify-between items-center">
+                <div className="md:w-1/2 pl-4">
                     <div className="text-white">
-                        <h1 className="text-6xl uppercase font-sanchez">Breakfast</h1>
+                        <h1 className="md:text-6xl text-3xl uppercase font-sanchez">Breakfast</h1>
                         <p>Breakfast, often referred to as the ‘most important meal of the day’, provides essential nutrients to kick start our day. It includes a variety of foods, like fruits, cereals, dairy products, and proteins, that contribute to a balanced diet. Eating a healthy breakfast can improve concentration and performance, boost physical endurance, and lower cholesterol levels.</p>
                     </div>
 
-                    <div className="thumbnails flex gap-4 mt-5">
-                        {images.map((image, index) => (
-                            <img
-                                key={index}
-                                src={image.small}
-                                onClick={() => handleImageChange(index)}
-                                className={`thumbnail cursor-pointer w-32 h-32 pb-3 ${activeImage === index ? "border-b-2" : ""}`}
-                            />
-                        ))}
+                    <div className="hidden md:block">
+                        <div className="flex gap-4 mt-5">
+                            {images.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image.small}
+                                    onClick={() => handleImageChange(index)}
+                                    className={`cursor-pointer md:w-32 md:h-32 pb-3 ${activeImage === index ? "border-b-2" : ""}`}
+                                />
+                            ))}
+                        </div>
                     </div>
 
                     <div className="">
@@ -67,7 +69,7 @@ const Banner = () => {
                     initial={{ opacity: 0, x: -200 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="large-banner w-1/4"
+                    className="md:w-1/4"
                 />
             </div>
         </motion.div>

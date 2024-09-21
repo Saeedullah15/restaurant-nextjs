@@ -34,10 +34,10 @@ const LatestNews = () => {
         <div>
             <div className="mb-8 text-center">
                 <h3 className="text-center text-[#2D2D2D] font-bold text-3xl mb-2">Latest news & Blog</h3>
-                <p className="text-[#828282] w-1/2 mx-auto text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum est perspiciatis iusto iste quidem repellendus odio dolorum quam possimus voluptates!</p>
+                <p className="text-[#828282] md:w-1/2 mx-auto text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum est perspiciatis iusto iste quidem repellendus odio dolorum quam possimus voluptates!</p>
             </div>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                     newsData.map(each =>
                         <div key={each.id} className="p-2 shadow">

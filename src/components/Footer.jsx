@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <>
             <div className="mt-20 bg-redHighlighter2 text-white">
-                <footer className="footer p-10 max-w-5xl mx-auto">
+                <footer className="footer p-10 md:max-w-5xl mx-auto">
                     <form>
                         <h2 className="uppercase text-2xl text-white font-semibold">Restaurant</h2>
                         <p className="text-xs my-2">Subscribe our newsletter and <br /> get discount 25%off</p>
@@ -30,20 +30,22 @@ const Footer = () => {
                     </form>
                     <nav>
                         <h2 className="font-semibold mb-2">Contact Us</h2>
-                        <a className="flex items-center gap-2"><span><CiLocationOn className="text-lg" /></span> 3517 W. Gray St. Utica, Pennsylvania 57867</a>
-                        <a className="flex items-center gap-2"><span><CiPhone className="text-lg" /></span>(480) 555-0103</a>
-                        <a className="flex items-center gap-2"><span><BsEnvelopeOpen className="text-sm" /></span>M.Alyaqout@4house.Co</a>
-                        <a className="flex items-center gap-2"><span><MdOutlineWatchLater className="text-lg" /></span>Sun - Sat / 10:00 AM - 8:00 PM</a>
+                        <p className="flex items-center gap-2"><span><CiLocationOn className="text-lg" /></span> 3517 W. Gray St. Utica, Pennsylvania</p>
+                        <p className="flex items-center gap-2"><span><CiPhone className="text-lg" /></span>(480) 555-0103</p>
+                        <p className="flex items-center gap-2"><span><BsEnvelopeOpen className="text-sm" /></span>M.Alyaqout@4house.Co</p>
+                        <p className="flex items-center gap-2"><span><MdOutlineWatchLater className="text-lg" /></span>Sun - Sat / 10:00 AM - 8:00 PM</p>
                     </nav>
-                    <nav className="ml-6">
+                    <nav className="md:ml-6">
                         <h2 className="font-semibold">Links</h2>
-                        <a className="link link-hover">About Us</a>
-                        <a className="link link-hover">Contact Us</a>
-                        <a className="link link-hover">Our Menu</a>
-                        <a className="link link-hover">Team</a>
-                        <a className="link link-hover">FAQ</a>
+                        <div className="flex gap-4 md:gap-0 md:flex-col">
+                            <a className="link link-hover">About Us</a>
+                            <a className="link link-hover">Contact Us</a>
+                            <a className="link link-hover">Our Menu</a>
+                            <a className="link link-hover">Team</a>
+                            <a className="link link-hover">FAQ</a>
+                        </div>
                     </nav>
-                    <nav className="ml-10">
+                    <nav className="ml-10 hidden md:block">
                         <h2 className="font-semibold mb-2">Instagram Gallery</h2>
                         <div className="grid grid-cols-3 gap-1">
                             <img src="/images/g1.png" alt="" />
@@ -58,19 +60,17 @@ const Footer = () => {
             </div>
 
             <div className="bg-redHighlighter1 text-white">
-                <footer className="p-4 max-w-5xl mx-auto text-xs">
-                    <div className="flex justify-between px-7">
-                        <p>Copyright © {new Date().getFullYear()} - All rights reserved.</p>
-                        <div className="flex gap-10">
-                            <p>Privacy Policy</p>
-                            <p>Terms Of Use</p>
-                            <p>Partner</p>
+                <footer className="p-4 md:max-w-5xl mx-auto text-xs">
+                    <div className="flex justify-center md:justify-between px-2 md:px-7">
+                        <p className="">Copyright © {new Date().getFullYear()} - All rights reserved.</p>
+                        <div className="hidden md:block">
+                            <div className="flex gap-10">
+                                <p>Privacy Policy</p>
+                                <p>Terms Of Use</p>
+                                <p>Partner</p>
+                            </div>
                         </div>
                     </div>
-
-                    {/* <aside>
-                        <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-                    </aside> */}
                 </footer>
             </div>
         </>

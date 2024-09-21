@@ -4,7 +4,7 @@ import { IoPlayOutline } from "react-icons/io5";
 
 const AboutUs = () => {
     return (
-        <div className="w-1/2">
+        <div className="md:w-1/2">
             <Fade>
                 <h3 className="text-redHighlighter1 font-miniver text-sm font-bold italic">About Us _____</h3>
                 <h1 className="font-bold text-[#333333] text-3xl mt-1 mb-3">Food is an important part Of a balanced Diet</h1>
